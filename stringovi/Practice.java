@@ -30,19 +30,25 @@ public class Practice {
       }
     }
     String users = "Ime: Vladimir|Prezime: Vladimirovic|Ime: Jovan|Prezime: Jovanovic|Ime: Petar|Prezime: Petrovic";
-    String newArray[]= users.split("\\|");
-    for(int i =0; i<newArray.length; i+=2){
+    String newArray[] = users.split("\\|");
+    for (int i = 0; i < newArray.length; i += 2) {
       String firstName = newArray[i].split(" ")[1];
-      String lastName = newArray[i+1].split(" ")[1];
-      System.out.println("ime korisnika je "+ firstName+ " , a prezime je: "+ lastName);
+      String lastName = newArray[i + 1].split(" ")[1];
+      System.out.println("ime korisnika je " + firstName + " , a prezime je: " + lastName);
     }
-    
 
+    String str = "Ana voli Milovana";
+    if (palindrome(str)) {
+      System.out.println("it is palindrome");
+    } else {
+      System.out.println("its not");
+    }
 
-    
+  }
 
-
-
+  private static boolean palindrome(String str) {
+    String maybePalindrome = str.replace(" ", "").toLowerCase();
+    return new StringBuilder(maybePalindrome).reverse().toString().equals(maybePalindrome);
   }
 
 }
