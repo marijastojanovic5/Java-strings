@@ -1,7 +1,5 @@
 package stringovi;
 
-import javax.lang.model.util.ElementScanner6;
-
 public class Practice {
   public static void main(String[] args) {
 
@@ -9,14 +7,14 @@ public class Practice {
         "The Oscar fish is not a difficult fish to look after if you give it a suitable environment to live in. You may start having problems such as health issues if you keep your Oscar in an unsuitably small tank or feed it on a poor diet",
         "The Oscar has the potential to reach 18 inches. However in captivity Oscars normally grow to between 8 and 12 inches" };
 
-    // for (int i = 0; i < texts.length; i++) {
-    //   if (texts[i].length() > 25) {
-    //     String tempString = texts[i].substring(0, 22);
-    //     tempString.concat("...");
-    //     System.out.println(tempString);
+    for (int i = 0; i < texts.length; i++) {
+      if (texts[i].length() > 25) {
+        String tempString = texts[i].substring(0, 22);
+        tempString.concat("...");
+        System.out.println(tempString);
 
-    //   }
-    // }
+      }
+    }
 
     String[] files = { "picture1.jpg", "text1.txt", "picture2.png", "text2.doc", "picture3.gif" };
 
@@ -31,6 +29,19 @@ public class Practice {
 
       }
     }
+    String users = "Ime: Vladimir|Prezime: Vladimirovic|Ime: Jovan|Prezime: Jovanovic|Ime: Petar|Prezime: Petrovic";
+    String newArray[]= users.split("\\|");
+    for(int i =0; i<newArray.length; i+=2){
+      String firstName = newArray[i].split(" ")[1];
+      String lastName = newArray[i+1].split(" ")[1];
+      System.out.println("ime korisnika je "+ firstName+ " , a prezime je: "+ lastName);
+    }
+    
+
+
+    
+
+
 
   }
 
